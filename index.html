@@ -4,12 +4,11 @@ var myDiv = document.getElementById('myDiv');
 var scrollP=document.getElementById('scrollTop');
 
 
-myDiv.addEventListener('touchend', function(e) {
+window.addEventListener('touchend', function(e) {
 
 var doc = document.documentElement;
 var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
   scrollP.innerHTML=(top);
-  alert(window.pageYOffset);
 });
 </script>
 <style type="text/css">
