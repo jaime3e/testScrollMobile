@@ -1,0 +1,49 @@
+<script type="text/javascript">
+
+var myDiv = document.getElementById('myDiv');
+var scrollP=document.getElementById('scrollTop');
+
+
+myDiv.addEventListener('touchend', function(e) {
+
+var doc = document.documentElement;
+var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+  scrollP.innerHTML=(top);
+  alert(window.pageYOffset);
+});
+</script>
+<style type="text/css">
+	*{font-size: 30px;}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#scrollTop{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 40px;
+    z-index: 3;
+}
+#myDiv {
+  height: 4000px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1c6ba0;
+}
+
+
+</style>
+
+
+<body>
+
+<p id='scrollTop'>0</p>
+
+<div id="myDiv">
+</div>
+</body>
